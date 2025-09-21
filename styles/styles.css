@@ -1,6 +1,20 @@
+:root {
+    --main-blue: darkblue;
+    --main-gray: gray;
+    --main-black: black;
+    --main-shadow: 0 0 30px var(--main-gray);
+    --main-padding: 10px;
+    --main-font: Arial, Helvetica, sans-serif;
+    --main-width: 300px;
+    --aside-width: 20rem;
+    --aside-bg: #eee;
+    --aside-color: #333;
+    --main-max-width: 840px;
+}
+
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--main-blue);
+    padding: var(--main-padding);
 }
 
 nav a {
@@ -10,16 +24,16 @@ nav a {
 }
 
 h1 {
-    color: darkblue;
+    color: var(--main-blue);
 }
 
 img {
-    width: 300px;
+    width: var(--main-width);
     max-width: 100%;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid var(--main-black);
     padding: 2px;
-    box-shadow: 0 0 30px gray;
+    box-shadow: var(--main-shadow);
 }
 
 p {
@@ -27,27 +41,26 @@ p {
 }
 
 main {
-    max-width: 840px;
+    max-width: var(--main-max-width);
 }
 
 main img {
-    width: 300px;
+    width: var(--main-width);
     height: auto;
-    border: 1px solid black;
+    border: 1px solid var(--main-black);
     padding: 2px;
-    box-shadow: 0 0 30px gray;
+    box-shadow: var(--main-shadow);
 }
 
 aside {
-    width: 20rem;
+    width: var(--aside-width);
     margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2); /* color negro con opacidad 0.2 */
+    border: 1px solid rgba(0, 0, 0, 0.2); 
     padding: 1rem;
-    background-color: #eee;
-    color: #333;
+    background-color: var(--aside-bg);
+    color: var(--aside-color);
     text-align: center;
 }
-
 
 aside img {
     width: 200px;
@@ -58,6 +71,6 @@ p {padding: 0;}
 
 footer {
     margin-top: 15px;
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--main-black);
     text-align: center;
-}   
+}

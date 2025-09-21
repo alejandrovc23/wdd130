@@ -4,64 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapids | About Us</title>
-    <meta name="description"
-        content="About Rapids! White Water Rafting company. Learn about our history, mission, and adventures waiting for you.">
-    <meta name="author" content="Alejandro Student">
-    <link rel="stylesheet" href="styles/rafting.css">
+    <title>About Us - Rapids!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <img src="images/logo.jpeg" alt="Rapids Logo" class="logo">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
+        <!-- Hero section -->
         <div class="hero">
             <img src="images/rafting.jpg" alt="Rafting Group" class="hero-img">
-            <h1 class="hero-title">Rapids! Make Memories!</h1>
-            <div class="hero-caption">
-                <p>Our goal is to provide you with the best experience possible. We have been providing unforgettable
-                    adventures for over 30 years. As a family-owned business, we are dedicated to offering safe, fun,
-                    and thrilling rafting trips guided by our experienced team.</p>
-                <img src="images/minirafting.jpg" alt="Mini Rafting" class="mini-img">
-            </div>
+            <h1>Rapids!</h1>
+            <article>
+                <img src="images/minirafting.jpg" alt="Mini Rafting" class="article-img">
+                <p>
+                    Welcome to Rapids! We are passionate about white water rafting and adventure.
+                    Our mission is to provide exciting and safe rafting experiences for families,
+                    friends, and thrill-seekers from around the world.
+                </p>
+            </article>
         </div>
 
+        <!-- History -->
         <section class="history">
-            <h2>History</h2>
-            <p>Rapids! started floating the river in 1995. Since then, we have welcomed thousands of adventurers who
-                trust
-                us to deliver unforgettable experiences. From small family outings to corporate adventures, we’ve built
-                a reputation for safety, excitement, and lasting memories.</p>
+            <h2>Our History</h2>
+            <p>
+                Rapids! was founded in 2005 with the goal of bringing adventure and nature together.
+                Over the years, we have guided thousands of rafters safely through some of the most
+                exciting rivers in the region. Our experienced team is committed to safety, fun, and
+                building unforgettable memories.
+            </p>
         </section>
 
+        <!-- Adventure grid -->
         <section class="adventure">
-            <h2>Adventure Awaits You</h2>
-            <p>Whether you’re a first-time rafter or a seasoned thrill-seeker, Rapids! has a trip for you. Explore
-                breathtaking canyons, conquer thrilling rapids, and create stories you’ll tell for years.</p>
+            <h2>Adventure Awaits You!</h2>
+            <div class="adventure-grid">
+                <figure>
+                    <img src="images/rafting1.jpg" alt="Rafting in canyon">
+                    <figcaption>Canyon Rafting</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting2.jpg" alt="Rafting with group">
+                    <figcaption>Group Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting3.jpg" alt="Rafting on calm river">
+                    <figcaption>Calm River Ride</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting4.jpg" alt="Rafting extreme rapids">
+                    <figcaption>Extreme Rapids</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting5.jpg" alt="Rafting sunset view">
+                    <figcaption>Sunset Ride</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>©2025 | Rapids! | Alejandro Student</p>
         <div class="socialmedia">
-            <a href="https://facebook.com" target="_blank">
-                <img src="images/facebook.svg" alt="Facebook">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Follow Rapids on Facebook">
+                <span class="sr-only">Facebook</span>
             </a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="images/x.svg" alt="X">
+            <a href="https://twitter.com">
+                <img src="images/x.svg" alt="Visit Rapids on X">
+                <span class="sr-only">X</span>
             </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/ig.svg" alt="Instagram">
+            <a href="https://instagram.com">
+                <img src="images/ig.svg" alt="Follow Rapids on Instagram">
+                <span class="sr-only">Instagram</span>
             </a>
         </div>
     </footer>

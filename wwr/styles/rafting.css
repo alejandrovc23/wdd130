@@ -1,124 +1,166 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =========================
+   Color scheme & fonts
+========================= */
+:root {
+  --primary-color: #055a05;        /* forest green */
+  --secondary-color: #f4a261;      /* warm sand */
+  --accent1-color: #264653;        /* dark slate blue */
+  --accent2-color: #e9c46a;        /* golden yellow */
+  --heading-font: "Times New Roman", "Georgia", serif;
+  --body-font: Arial, Helvetica, sans-serif;
 }
 
+/* =========================
+   Global styles
+========================= */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  font-family: var(--body-font);
+  margin: 0;
+  background: #fff;
 }
 
-/* Header */
+/* =========================
+   Header & Navigation
+========================= */
 header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #004466;
-  padding: 1rem;
+  align-items: flex-start;
+  padding: 1rem 2rem 0 2rem;
+  background: #fff;
 }
 
 .logo {
-  height: 60px;
+  width: 120px;
+  margin-right: 2rem;
 }
 
-nav a {
-  color: white;
+nav ul {
+  list-style: disc;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+nav ul li {
+  margin-bottom: 0.5rem;
+}
+
+nav ul li a {
   text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
+  color: var(--accent1-color);
+  font-weight: 500;
 }
 
-nav a:hover {
-  text-decoration: underline;
+/* =========================
+   Main Content
+========================= */
+main {
+  max-width: 98vw;
+  margin: 0 auto;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
   position: relative;
-  text-align: center;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
 }
 
 .hero-img {
   width: 100%;
-  height: auto;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  float: none; /* ensures not floated */
+}
+
+.hero img {
+  float: none; /* no float allowed */
   display: block;
 }
 
-.hero h1 {
+.hero-title {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: rgba(30, 60, 120, 0.6);
+  padding: 0.5rem 0;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
-.hero article {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 1rem;
-  margin: 1rem auto;
-  max-width: 800px;
+.hero-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 95%;
+  margin: 0 2.5%;
+  background: rgba(30, 60, 120, 0.7);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.hero-caption p {
+  flex: 1;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.mini-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  margin-left: 1rem;
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px #222;
+  background: var(--accent2-color);
+  float: none; /* not floated */
+}
+
+/* History & Adventure Sections */
+.history,
+.adventure {
+  margin: 2rem 0 0 0;
+  text-align: center;
+}
+
+.history h2,
+.adventure h2 {
+  background: var(--accent1-color);
+  color: #fff;
+  margin: 0;
+  padding: 0.7rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.history p {
+  background: #fff;
+  color: #222;
+  margin: 0;
+  padding: 1rem 2rem;
+  font-size: 1rem;
   text-align: left;
 }
 
-.article-img {
-  float: right;
-  margin: 0 0 1rem 1rem;
-  width: 200px;
-  border-radius: 5px;
-}
-
-/* History */
-.history {
-  padding: 2rem;
-  background: #fff;
-}
-
-.history h2 {
-  margin-bottom: 1rem;
-  color: #004466;
-}
-
-/* Adventure grid */
-.adventure {
-  padding: 2rem;
-}
-
-.adventure h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #004466;
-}
-
-.adventure-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-}
-
-.adventure-grid img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.adventure-grid figcaption {
-  text-align: center;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
-
-/* Footer */
+/* =========================
+   Footer & Social Media
+========================= */
 footer {
-  background: #004466;
-  color: white;
+  margin-top: 2rem;
+  padding: 1rem 0 0.5rem 0;
   text-align: center;
-  padding: 1rem;
+  font-size: 1rem;
+  color: #222;
+  background: #fff;
 }
 
 .socialmedia {
@@ -126,25 +168,12 @@ footer {
 }
 
 .socialmedia a {
-  text-decoration: none;
-  margin: 0 5px;
+  text-decoration: none; /* required fix */
 }
 
 .socialmedia a img {
-  width: 24px;
+  width: 24px;   /* smaller icons */
   height: 24px;
+  margin: 0 4px;
   vertical-align: middle;
-}
-
-/* Screen reader only text */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }

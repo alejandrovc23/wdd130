@@ -8,7 +8,7 @@
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Base and reset */
+
 body {
   font-family: var(--body-font);
   margin: 0;
@@ -29,7 +29,7 @@ header {
 }
 
 nav ul {
-  list-style: none; /* 🔹 mejor sin viñetas */
+  list-style: none; 
   padding-left: 0;
   margin: 0;
   display: flex;
@@ -137,7 +137,6 @@ main {
   text-align: left;
 }
 
-/* Footer */
 footer {
   margin-top: 2rem;
   padding: 1rem 0 0.5rem 0;
@@ -152,7 +151,7 @@ footer {
 }
 
 .socialmedia a {
-  text-decoration: none; /* 🔹 requerido */
+  text-decoration: none; 
 }
 
 .socialmedia a img {

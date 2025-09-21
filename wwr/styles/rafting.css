@@ -1,27 +1,18 @@
-/* =========================
-   Color scheme & fonts
-========================= */
 :root {
-  --primary-color: #055a05;        /* forest green */
-  --secondary-color: #f4a261;      /* warm sand */
-  --accent1-color: #264653;        /* dark slate blue */
-  --accent2-color: #e9c46a;        /* golden yellow */
-  --heading-font: "Times New Roman", "Georgia", serif;
+  --primary-color: #1a3764;   /* navy blue */
+  --secondary-color: #f4a261; /* warm sand */
+  --accent1-color: #264653;   /* slate blue */
+  --accent2-color: #e9c46a;   /* golden yellow */
+  --heading-font: "Georgia", serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   Global styles
-========================= */
 body {
   font-family: var(--body-font);
   margin: 0;
   background: #fff;
 }
 
-/* =========================
-   Header & Navigation
-========================= */
 header {
   display: flex;
   align-items: flex-start;
@@ -46,19 +37,15 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--accent1-color);
+  color: var(--primary-color);
   font-weight: 500;
 }
 
-/* =========================
-   Main Content
-========================= */
 main {
   max-width: 98vw;
   margin: 0 auto;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   margin: 1rem 0;
@@ -69,14 +56,8 @@ main {
   height: 350px;
   object-fit: cover;
   display: block;
-  float: none; /* prevents float */
-}
-
-/* Stronger rule to satisfy validator */
-article.hero > img {
   float: none !important;
-  display: block;
-  margin: 0 auto; /* centers hero image */
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -122,29 +103,27 @@ article.hero > img {
   margin-left: 1rem;
   border: 2px solid #fff;
   box-shadow: 0 0 8px #222;
-  background: var(--accent2-color);
-  float: none; /* explicitly no float */
+  background: #ccc;
+  float: none !important;
 }
 
-/* History & Adventure Sections */
-.history,
-.adventure {
+.history, .adventure {
   margin: 2rem 0 0 0;
   text-align: center;
 }
 
-.history h2,
-.adventure h2 {
-  background: var(--accent1-color);
+.history h2, .adventure h2 {
+  background: var(--primary-color);
   color: #fff;
   margin: 0;
   padding: 0.7rem 0;
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
+  font-family: var(--heading-font);
 }
 
-.history p {
+.history p, .adventure p {
   background: #fff;
   color: #222;
   margin: 0;
@@ -153,9 +132,6 @@ article.hero > img {
   text-align: left;
 }
 
-/* =========================
-   Footer & Social Media
-========================= */
 footer {
   margin-top: 2rem;
   padding: 1rem 0 0.5rem 0;
@@ -170,12 +146,12 @@ footer {
 }
 
 .socialmedia a {
-  text-decoration: none; /* required fix */
+  text-decoration: none;
 }
 
 .socialmedia a img {
-  width: 24px;   /* smaller icons */
-  height: 24px;
-  margin: 0 4px;
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
   vertical-align: middle;
 }

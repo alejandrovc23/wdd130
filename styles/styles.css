@@ -19,19 +19,26 @@
 }
 
 nav {
-    background-color: var(--main-blue);
-    padding: var(--main-padding);
+    background-color: steelblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
-    color: white;
-    display: block;
-    padding: 20px;
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff; /* shorthand for white */
 }
 
 h1 {
     color: var(--main-blue);
-    padding: .5rem
+    padding: .5rem;
+    border-bottom: 2px solid var(--main-black); /* Borde inferior */
 }
 
 img {
@@ -46,10 +53,6 @@ img {
 p {
     padding: 10px;
     margin: 1rem;
-}
-
-main {
-    max-width: var(--main-max-width);
 }
 
 main img {
@@ -73,7 +76,6 @@ aside {
     position: relative;
 }
 
-
 aside img {
     width: 200px;
     height: auto;
@@ -85,8 +87,6 @@ aside h2 {
     left: 130px;  
 }
 
-
-
 footer {
     margin-top: 15px;
     border-top: 1px solid var(--main-black);
@@ -94,7 +94,6 @@ footer {
 }
 
 /* Class Selectors */
-
 .box {
   margin: 1rem;
   border: 1px solid rgb(0 0 0 / 10%);
@@ -103,12 +102,31 @@ footer {
   color: #000;
 }
 
-aside{
-    width: 20em;
-    text-align: center;
-}
-
-
 .indent {
     padding-left: 2rem;
+}
+
+/* Header, grid y footer comparten ancho máximo y centrado */
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 20rem 1fr; /* aside a la izquierda, main al lado */
+    gap: 1rem;
+}
+
+/* Posiciones en la grilla */
+aside {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+main {
+    grid-column: 2/3;
+    margin: 1rem;
 }

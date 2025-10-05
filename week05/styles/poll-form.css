@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.2em;
+  color: #333;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+header {
+  margin: 0 auto 1rem;
+  width: 650px;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 1.5em;
+  color: navy;
+  text-align: center;
+}
+
+form {
+  width: 650px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: #f2f2f2;
+  display: grid;
+  gap: 1.5rem;
+}
+
+fieldset {
+  display: grid;
+  grid-gap: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: navy;
+  font-size: 1.2em;
+}
+
+label, input, button, select, textarea {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.form-item {
+  display: grid;
+}
+
+.column1 {
+  grid-template-columns: 1fr;
+}
+
+.column2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-button {
+  text-align: center;
+}
+
+button {
+  background-color: navy;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgreen;
+}
+
+footer {
+  margin: 1.5rem auto 0;
+  width: 650px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #777;
+  border-top: 1px solid #ccc;
+  padding-top: 0.5rem;
+}
+
+/* NUEVO: Centrar texto de etiquetas */
+.center-text label {
+  text-align: center;
+  display: block;
+}

@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapids | Contact Us</title>
+
     <meta name="description"
-        content="Contact Rapids! White Water Rafting for reservations, inquiries, or suggestions. Find our address, phone, email, and employee information.">
+        content="Get in touch with Rapids! Contact us for general inquiries, reservations, or website suggestions. We're here to help you plan your next white water adventure.">
     <meta name="author" content="Alejandro Student">
+
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-    <!-- Header & Navigation -->
     <header>
         <img src="images/logo.jpeg" alt="Rapids Logo" class="logo">
         <nav>
@@ -20,94 +21,80 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Contact Info Section -->
         <section class="contact-info">
-            <h1>Contact Rapids!</h1>
-            <p><strong>Address:</strong> 123 River Lane, Adventure Town, USA</p>
-            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-            <p><strong>Email:</strong> info@rapids.com</p>
+            <h1>Rapids Rafting Company</h1>
+            <p>123 Main River Street<br>Kolob, California<br>+1 999 999 9999<br>
+                <a href="mailto:info@rapids.com">info@rapids.com</a>
+            </p>
+        </section>
 
-            <!-- Google Map Embed -->
+        <section class="contact-grid">
+            <!-- Google Map -->
             <div class="map-container">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019740091789!2d-122.40135048468187!3d37.79324567975695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d03b8f3f%3A0x9a6e3e58b2924a!2sAdventure%20River!5e0!3m2!1sen!2sus!4v1696500000000!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509868!2d-122.41941568468128!3d37.77492927975998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d0f7bffb%3A0xdaa3b5d3e5c9b7a4!2sCalifornia!5e0!3m2!1sen!2sus!4v1697050000000"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <fieldset>
+                    <legend>Message Purpose</legend>
+                    <label><input type="radio" name="purpose" value="general" required> General Inquiry</label><br>
+                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label><br>
+                    <label><input type="radio" name="purpose" value="website"> Website Suggestion</label>
+                </fieldset>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here"></textarea>
+
+                <label><input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter</label>
+
+                <button type="submit" class="btn-submit">Get in Touch!</button>
+            </form>
         </section>
 
-        <!-- Employee Section -->
         <section class="employees">
-            <h2>Meet Our Team</h2>
-            <div class="employee-gallery">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-grid">
                 <figure>
-                    <img src="images/guide1.png" alt="John Smith - Guide">
-                    <figcaption>John Smith - Lead Guide</figcaption>
+                    <img src="images/guide1.png" alt="Employee 1">
+                    <figcaption>Alex Johnson<br><small>Lead Rafting Guide</small></figcaption>
                 </figure>
                 <figure>
-                    <img src="images/guide2.png" alt="Sarah Johnson - Safety Officer">
-                    <figcaption>Sarah Johnson - Safety Officer</figcaption>
+                    <img src="images/guide2.png" alt="Employee 2">
+                    <figcaption>Maria Lopez<br><small>Customer Relations</small></figcaption>
                 </figure>
                 <figure>
-                    <img src="images/guide3.png" alt="Carlos Rivera - Trip Coordinator">
-                    <figcaption>Carlos Rivera - Trip Coordinator</figcaption>
+                    <img src="images/guide3.png" alt="Employee 3">
+                    <figcaption>Daniel Smith<br><small>Safety Coordinator</small></figcaption>
                 </figure>
             </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="#" method="post">
-                <!-- Name -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <!-- Email -->
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <!-- Purpose (Radio Buttons) -->
-                <p>Purpose of your message:</p>
-                <input type="radio" id="purpose-general" name="purpose" value="general" required>
-                <label for="purpose-general">General Inquiry</label>
-
-                <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
-                <label for="purpose-reservation">Reservation Question</label>
-
-                <input type="radio" id="purpose-website" name="purpose" value="website">
-                <label for="purpose-website">Website Suggestion</label>
-
-                <!-- Message -->
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <!-- Newsletter Checkbox -->
-                <input type="checkbox" id="subscribe" name="subscribe">
-                <label for="subscribe">Please subscribe me to the monthly newsletter</label>
-
-                <!-- Submit Button -->
-                <button type="submit">Send Message</button>
-            </form>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>©2025 | Rapids! | Alejandro Student</p>
         <div class="socialmedia">
-            <a href="https://facebook.com" target="_blank" aria-label="Follow us on Facebook">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/facebook.svg" alt="Facebook">
             </a>
-            <a href="https://x.com" target="_blank" aria-label="Follow us on X">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/x.svg" alt="X">
             </a>
-            <a href="https://instagram.com" target="_blank" aria-label="Follow us on Instagram">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/instagram.svg" alt="Instagram">
             </a>
         </div>
